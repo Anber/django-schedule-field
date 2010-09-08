@@ -1,0 +1,84 @@
+@import "mixins";
+.schedule-widget {
+	position:relative;
+	@size:15px;
+	@bg-color:#fff;
+	@cell-color:#aaa;
+	@hover-color:#ffa;
+	@work-color:#afa;
+	
+	font-size:10px;
+	line-height:@size;
+	background:@bg-color;
+	width:(@size + 2) * 25;
+	height:(@size + 2) * 8;
+	
+	.hours {
+		-webkit-user-select:none;
+		-moz-user-select: none;
+		-o-user-select:none;
+		width:(@size + 2) * 24;
+		height:(@size + 2) * 7;
+		float:right;
+		position:relative;
+		
+		.hour {
+			:hover {
+				background:@hover-color;
+			}
+		}
+		
+		.work {
+			background:@work-color;
+		}
+		
+		.hover {
+			background:@hover-color;
+		}
+		
+		.work.hover {
+			background:#dfa!important;
+		}
+	}
+	
+	.cell {
+		float:left;
+		width:@size;
+		height:@size;
+		border:1px solid @bg-color;
+		background:@cell-color;
+		.transition(background-color, 0.15s, linear);
+	}
+	
+	.blank {
+		background:@bg-color;
+	}
+	
+	.header {
+		text-align:center;
+		background:@bg-color;
+	}
+	
+	.legend {
+		position:absolute;
+		bottom:0;
+		height:@size+2;
+		width:100%;
+	}
+}
+
+.schedule-context-menu {
+	position:absolute;
+	border:1px solid #aaa;
+	background:#fff;
+	.box-shadow;
+	
+	a {
+		padding:0 0.5em;
+		display:block;
+		
+		:hover {
+			background:#eee;
+		}
+	}
+}

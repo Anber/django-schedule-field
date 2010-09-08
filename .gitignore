@@ -1,0 +1,10 @@
+*.*~
+*.pyc
+.DS_Store
+._*
+pip-log.txt
+ENV/
+.idea
+build
+dist
+*.egg-info

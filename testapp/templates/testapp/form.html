@@ -1,0 +1,20 @@
+<!DOCTYPE HTML>
+<html>
+<head>
+	<title></title>
+	<script src="http://ajax.googleapis.com/ajax/libs/jquery/1.4.2/jquery.min.js"></script>
+	{{ form.media }}
+</head>
+<body>
+	<ul>
+		{% for item in obj_list %}
+			<li><a href="{% url edit item.pk %}">{{ item.name }}</a></li>
+		{% endfor %}
+	</ul>
+	<form method="post" action="">
+		{% csrf_token %}
+		{{ form.as_p }}
+		<p><input type="submit"></p>
+	</form>
+</body>
+</html>

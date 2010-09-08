@@ -1,0 +1,57 @@
+.schedule-widget {
+  position: relative;
+  font-size: 10px;
+  line-height: 15px;
+  background: #ffffff;
+  width: 425px;
+  height: 136px;
+}
+.schedule-widget .hours {
+  -webkit-user-select: none;
+  -moz-user-select: none;
+  -o-user-select: none;
+  width: 408px;
+  height: 119px;
+  float: right;
+  position: relative;
+}
+.schedule-widget .hours .hour:hover { background: #ffffaa; }
+.schedule-widget .hours .work { background: #aaffaa; }
+.schedule-widget .hours .hover { background: #ffffaa; }
+.schedule-widget .hours .work.hover { background: #ddffaa !important; }
+.schedule-widget .cell {
+  float: left;
+  width: 15px;
+  height: 15px;
+  border: 1px solid #ffffff;
+  background: #aaaaaa;
+  -webkit-transition: background-color 0.15s linear;
+  -moz-transition: background-color 0.15s linear;
+  -o-transition: background-color 0.15s linear;
+  transition: background-color 0.15s linear;
+}
+.schedule-widget .blank { background: #ffffff; }
+.schedule-widget .header {
+  text-align: center;
+  background: #ffffff;
+}
+.schedule-widget .legend {
+  position: absolute;
+  bottom: 0;
+  height: 17px;
+  width: 100%;
+}
+.schedule-context-menu {
+  position: absolute;
+  border: 1px solid #aaaaaa;
+  background: #ffffff;
+  -webkit-box-shadow: 0px 0px 3px #555555;
+  -moz-box-shadow: 0px 0px 3px #555555;
+  -o-box-shadow: 0px 0px 3px #555555;
+  box-shadow: 0px 0px 3px #555555;
+}
+.schedule-context-menu a {
+  padding: 0 0.5em;
+  display: block;
+}
+.schedule-context-menu a:hover { background: #eeeeee; }
