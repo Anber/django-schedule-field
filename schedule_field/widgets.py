@@ -17,8 +17,7 @@ class ScheduleWidget(Textarea):
         if isinstance(value, (list, tuple)):
             value = ','.join(list(Hour.objects.values_list('id', flat=True).filter(pk__in=value)))
         final_attrs = self.build_attrs(attrs, name=name)
-        return mark_safe(u"<textarea%s>%s</textarea><script>$(function() {$('#%s').schedule();});</script>" % (
+        return mark_safe(u'<textarea data-widget="schedule"%s>%s</textarea>' % (
                 flatatt(final_attrs),
                 conditional_escape(force_unicode(value)),
-                final_attrs.get('id'),
         ))
