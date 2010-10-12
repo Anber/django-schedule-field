@@ -124,10 +124,10 @@ Array.prototype.min = function() {
 
 			// Создаём контекстное меню
 			var context_menu = $('<div></div>').addClass('schedule-context-menu').hide();
-			context_menu.append($('<a href="javascript:void(0);">Рабочее время</a>').addClass('button').click(mark_as_work));
-			context_menu.append($('<a href="javascript:void(0);">Нерабочее время</a>').addClass('button').click(mark_as_off));
-			context_menu.append($('<a href="javascript:void(0);">Инвертировать</a>').addClass('button').click(invert));
-			context_menu.append($('<a href="javascript:void(0);">Отмена</a>').addClass('button').click(close_context_menu));
+			context_menu.append($('<a href="javascript:void(0);">Рабочее время</a>').addClass('schedule-menu-item').click(mark_as_work));
+			context_menu.append($('<a href="javascript:void(0);">Нерабочее время</a>').addClass('schedule-menu-item').click(mark_as_off));
+			context_menu.append($('<a href="javascript:void(0);">Инвертировать</a>').addClass('schedule-menu-item').click(invert));
+			context_menu.append($('<a href="javascript:void(0);">Отмена</a>').addClass('schedule-menu-item').click(close_context_menu));
 			$('body').append(context_menu);
 
 			// Верхняя левая ячейка
